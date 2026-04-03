@@ -1,8 +1,8 @@
-﻿#pragma once
+#pragma once
 // Student_info.h
 
-#ifndef GUARD_STUDENT_info_h
-#define GUARD_STUDENT_info_h
+#ifndef GUARD_Student_info
+#define GUARD_Student_info
 
 #include <iostream>
 #include <string>
@@ -10,15 +10,14 @@
 
 using namespace std;
 
-struct Student_info
-{
-	string name;
-	double midterm, final;
-	vector<double> homework;
-}
+struct Student_info {
+    string name;
+    double midterm, final;
+    vector<double> homework;
+}; // 세미콜론을 잊지 않도록 주의
 
-//함수 원형 정의
 bool compare(const Student_info&, const Student_info&);
 istream& read(istream&, Student_info&);
 istream& read_hw(istream&, vector<double>&);
-#endif // GUARD_STUDENT_INFO_H
+
+#endif
